@@ -59,8 +59,8 @@ response = requests.get("https://www.qfes.qld.gov.au/data/alerts/bushfireAlert.x
 if not response:
     print("Failed to fetch bushfire data.")
 else:
-    # print(response.text)
-    data = BeautifulSoup(response.text, features="xml")
+    # data = BeautifulSoup(response.text, features="xml")
+    data = BeautifulSoup(response.text)
     for index, item in enumerate(data.find_all('georss:point')):
         fire_pos = item.string.split()
         fire_pos = (float(fire_pos[0]), float(fire_pos[1]))
