@@ -1,6 +1,9 @@
+# Code by Wilko Grunefeld.
+# licensed under AGPLv3
+# See https://github.com/yetanothercarbot/qld_fire_finder
+
 import math, requests
 from bs4 import BeautifulSoup
-
 
 # Check if location has already been entered
 try:
