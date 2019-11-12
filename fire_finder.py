@@ -10,7 +10,7 @@ try:
     f = open('location.txt', 'r')
     home_pos = f.readline().split()
     f.close()
-    print("You have run this program before, so using the same location as last")
+    print("You have run this program before, so I am using the same location as last")
     print("time. If you wish to use a different location, please delete the location")
     print("file that is in the same folder as this program, and restart this software.")
 except FileNotFoundError:
@@ -46,6 +46,15 @@ def calculate_distance(pos1, pos2):
     return round(d*1)/1000
 
 closest_fire = {"name": None, "distance": 0, "location": None, "info": None}
+
+print("---\nPLEASE NOTE: Software is susceptible to bugs, and this is no\n"
+      +"different. Do not rely on Fire Finder to always give correct information\n"
+      +"and please stay safe during fire season. We are not responsible for\n"
+      +"injuries, property losses, or other damages due to use of this software.\n"
+      +"For more information on what to do during bushfires, please see QFES:\n"
+      +"https://www.ruralfire.qld.gov.au/BushFire_Safety/Pages/default.aspx")
+input("\nPress enter to continue.")
+print("---\nLoading fire data...")
 response = requests.get("https://www.qfes.qld.gov.au/data/alerts/bushfireAlert.xml")
 if not response:
     print("Failed to fetch bushfire data.")
