@@ -2,6 +2,9 @@
 # licensed under AGPLv3
 # See https://github.com/yetanothercarbot/qld_fire_finder
 
+# Build command (windows):
+# py -3 -m PyInstaller --onefile .\fire_finder.py --distpath out
+
 import math, requests
 from bs4 import BeautifulSoup
 
@@ -73,4 +76,4 @@ else:
             closest_fire["distance"] = fire_distance
     print(f"---\nThe closest fire is {closest_fire['distance']}km away, at {closest_fire['name']}")
     print(closest_fire["info"])
-    input("---\nPress enter to quit.")
+input("---\nPress enter to quit.") # Show regardless if request failed or not.
