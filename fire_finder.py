@@ -9,6 +9,9 @@ import math, requests
 from bs4 import BeautifulSoup
 
 # Check if location has already been entered
+print("\n\n##########################")
+print("#   Fire Finder v1.0.3   #")
+print("##########################\n\n")
 try:
     f = open('location.txt', 'r')
     home_pos = f.readline().split()
