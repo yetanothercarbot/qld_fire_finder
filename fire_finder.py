@@ -63,7 +63,7 @@ if not response:
     print("Failed to fetch bushfire data.")
 else:
     # data = BeautifulSoup(response.text, features="xml")
-    data = BeautifulSoup(response.text)
+    data = BeautifulSoup(response.text, features="lxml")
     for index, item in enumerate(data.find_all('georss:point')):
         fire_pos = item.string.split()
         fire_pos = (float(fire_pos[0]), float(fire_pos[1]))

@@ -12,11 +12,11 @@ If you have Python installed, or you are running MacOS or Linux, it is recommend
 ### Requirements:
 Fire Finder requires Python3, and the BeautifulSoup 4 and requests modules:
 ```shell
-pip3 install BeautifulSoup4 requests # Linux install
+pip3 install BeautifulSoup4 requests lxml # Linux install
 ```
 
 ```shell
-py -3 -m pip install BeautifulSoup4 requests # Windows install
+py -3 -m pip install BeautifulSoup4 requests lxml # Windows install
 ```
 ### Running
 In a terminal window, run:
